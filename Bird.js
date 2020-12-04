@@ -13,15 +13,16 @@ class Bird extends BaseClass {
     super.display();
     // push()
     //pop()
-     if(this.body.velocity.x>15 && this.body.position.x > 220 )
+    if(this.body.velocity.x>15 && this.body.position.x > 220 )
     {
     var position = [this.body.position.x, this.body.position.y]
     this.trajectory.push(position); 
-    }
+     }
    
-      console.log(this.body.position.x);
+  
       for(var i=0; i<this.trajectory.length; i=i+1){
         image(this.smokeImage, this.trajectory[i][0], this.trajectory[i][1])
       }
+    
   }
 }
